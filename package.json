@@ -6,6 +6,11 @@
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
+    "test": "node src/testPhase6Regression.js",
+    "test:all": "node src/testPhase2Workflow.js && node src/testPhase3Security.js && node src/testPhase5Teams.js && node src/testUserJourneys.js && node src/testPhase6Regression.js",
+    "db:init": "node src/initPlatformTables.js",
+    "db:seed": "node src/seedPlatformData.js",
+    "db:backup": "node src/utils/dbBackup.js",
     "seed:admin": "node src/seedAdmin.js"
   },
   "dependencies": {
@@ -17,6 +22,6 @@
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.12.0",
-    "nodemailer": "^6.10.0"
+    "nodemailer": "^10.3.1"
   }
 }

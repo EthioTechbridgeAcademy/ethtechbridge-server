@@ -1,4 +1,19 @@
+# Environment files
 .env
-.env.example
+.env.local
+.env.*.local
+
+# Dependencies
 node_modules/
+
+# Database dumps & backups
+backups/
+*.sql
+*.dump
+
+# Logs
+*.log
+npm-debug.log*
+
+# One-off admin seeds with local credentials
 seedAdmin.js
